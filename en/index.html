@@ -88,6 +88,11 @@
     .cta:focus-visible { outline: 3px solid var(--teal-soft); outline-offset: 3px; }
     .cta svg { width: 22px; height: 22px; }
     .cta-note { margin-top: 12px; font-size: 13px; color: var(--muted); }
+    .qr-card { display: inline-flex; align-items: center; gap: 14px; margin-top: 22px;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 16px; padding: 12px 18px 12px 12px; font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .qr-card img { background: #fff; border-radius: 10px; padding: 6px; display: block; }
+    @media (max-width: 860px) { .qr-card { display: none; } }
 
     /* phone */
     .phone {
@@ -201,6 +206,10 @@
           Try it on WhatsApp
         </a>
         <div class="cta-note">+44 7529 450098 · opens a chat, just send a voice message</div>
+        <div class="qr-card">
+          <img src="/qr.svg" alt="QR code — open WhatApp? in WhatsApp" width="96" height="96" loading="lazy" />
+          <span>On a computer?<br />Scan with your phone</span>
+        </div>
       </div>
 
       <div class="phone" aria-hidden="true">
@@ -270,8 +279,20 @@
     <footer>
       WhatApp? — Audio &amp; Video Translator + Transcriber, v1.<br />
       Messages are processed automatically only to provide transcription and translation.<br />
-      Not affiliated with WhatsApp or Meta. A <a href="https://b3.gg">b3.gg</a> project.
+      Not affiliated with WhatsApp or Meta. A <a href="https://b3.gg">b3.gg</a> project.<br />
+      <a href="/privacy.html">Privacy Policy</a>
     </footer>
   </div>
+  <script>
+    (function () {
+      var base = "https://translator-store.b3gg.workers.dev/hit";
+      var p = encodeURIComponent(location.pathname);
+      function hit(e) { try { navigator.sendBeacon(base + "?e=" + e + "&p=" + p); } catch (_) {} }
+      hit("view");
+      document.querySelectorAll("a.cta").forEach(function (a) {
+        a.addEventListener("click", function () { hit("cta"); });
+      });
+    })();
+  </script>
 </body>
 </html>

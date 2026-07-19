@@ -84,6 +84,11 @@
     .cta:focus-visible { outline: 3px solid var(--teal-soft); outline-offset: 3px; }
     .cta svg { width: 22px; height: 22px; }
     .cta-note { margin-top: 12px; font-size: 13px; color: var(--muted); }
+    .qr-card { display: inline-flex; align-items: center; gap: 14px; margin-top: 22px;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      border-radius: 16px; padding: 12px 18px 12px 12px; font-size: 13px; color: var(--muted); line-height: 1.5; }
+    .qr-card img { background: #fff; border-radius: 10px; padding: 6px; display: block; }
+    @media (max-width: 860px) { .qr-card { display: none; } }
     .phone { width: min(360px, 100%); margin: 0 auto; border-radius: 34px; overflow: hidden;
       border: 6px solid #120a2c; background: #0b141a;
       box-shadow: 0 30px 70px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.06); }
@@ -181,6 +186,10 @@
             Открыть в WhatsApp
           </a>
           <div class="cta-note">+44 7529 450098 · откроется чат — просто отправьте голосовое</div>
+          <div class="qr-card">
+            <img src="/qr.svg" alt="QR-код — открыть WhatApp? в WhatsApp" width="96" height="96" loading="lazy" />
+            <span>Открыли с компьютера?<br />Наведите камеру телефона</span>
+          </div>
         </div>
 
         <div class="phone" aria-hidden="true">
@@ -245,8 +254,20 @@
     <footer>
       WhatApp? — переводчик и расшифровка аудио и видео, версия 1.<br />
       Сообщения обрабатываются автоматически только для расшифровки и перевода.<br />
-      Проект не связан с WhatsApp или Meta. Разработано <a href="https://b3.gg">b3.gg</a>.
+      Проект не связан с WhatsApp или Meta. Разработано <a href="https://b3.gg">b3.gg</a>.<br />
+      <a href="/privacy.html">Политика конфиденциальности (Privacy Policy)</a>
     </footer>
   </div>
+  <script>
+    (function () {
+      var base = "https://translator-store.b3gg.workers.dev/hit";
+      var p = encodeURIComponent(location.pathname);
+      function hit(e) { try { navigator.sendBeacon(base + "?e=" + e + "&p=" + p); } catch (_) {} }
+      hit("view");
+      document.querySelectorAll("a.cta").forEach(function (a) {
+        a.addEventListener("click", function () { hit("cta"); });
+      });
+    })();
+  </script>
 </body>
 </html>
