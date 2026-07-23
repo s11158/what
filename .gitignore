@@ -1,2 +1,5 @@
+gen_content.py
+gen_pages.py
+content.json
 enable_https.sh
 https_progress.log
