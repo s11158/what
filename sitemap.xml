@@ -2,12 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://what.b3.gg/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://what.b3.gg/en/</loc>
-    <lastmod>2026-07-23</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -113,6 +113,26 @@
   <url>
     <loc>https://what.b3.gg/en/translate/italian/</loc>
     <lastmod>2026-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://what.b3.gg/novosti/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://what.b3.gg/novosti/obnovlenie-sentyabr-2026/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://what.b3.gg/en/news/</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://what.b3.gg/en/news/september-2026-update/</loc>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>

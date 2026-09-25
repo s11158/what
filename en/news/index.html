@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>WhatApp? news</title>
+<meta name="description" content="What's new in the bot: updates, new languages and features." />
+<link rel="canonical" href="https://what.b3.gg/en/news/" />
+<link rel="alternate" hreflang="en" href="https://what.b3.gg/en/news/" />
+<link rel="alternate" hreflang="ru" href="https://what.b3.gg/novosti/" />
+<meta property="og:title" content="WhatApp? news" />
+<meta property="og:description" content="What's new in the bot: updates, new languages and features." />
+<meta property="og:image" content="https://what.b3.gg/og.png" />
+<meta property="og:url" content="https://what.b3.gg/en/news/" />
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="WhatApp?" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://what.b3.gg/og.png" />
+<link rel="icon" type="image/png" href="/avatar.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&amp;family=Sora:wght@600;700;800&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/style.css" />
+<style>
+.date{font-size:13px;color:var(--muted-2);margin-bottom:10px}
+.lead{font-size:17px;color:#D9D4EC}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:6px}
+.feat div{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:16px;padding:18px}
+.feat .ico{font-size:24px;display:block;margin-bottom:8px}
+.feat p{font-size:14px;margin:0}
+.post{display:block;text-decoration:none;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);
+border-radius:18px;padding:22px;margin-top:16px;color:var(--ink)}
+.post:hover{background:rgba(127,217,207,.12)}
+.post h2{margin:4px 0 8px}
+.post p{margin:0}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Blog", "name": "WhatApp? news", "inLanguage": "en", "url": "https://what.b3.gg/en/news/"}</script>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <img src="/avatar.png" alt="WhatApp?" />
+  <div><b>WhatApp?</b><small>Audio &amp; Video Translator + Transcriber · free</small></div>
+  <nav class="language"><a href="/novosti/" hreflang="ru">RU</a><span aria-current="page">EN</span></nav>
+</header>
+<div class="crumbs"><a href="/en/">Home</a> / News</div>
+<main>
+<h1>WhatApp? news</h1>
+<p class="lead">What's new in the bot: updates, new languages and features.</p>
+<a class="post" href="/en/news/september-2026-update/"><div class="date">September 25, 2026</div><h2>Big update: images, PDFs and voice replies in your contact's language</h2><p>We studied how people use the bot and shipped our largest update since launch. WhatApp? now reads screenshots and documents, voices your reply in your contact's language and speaks three more languages used by much of the workforce in the UAE.</p></a>
+</main>
+<footer>
+  Not affiliated with WhatsApp or Meta. Built by <a href="https://b3.gg">b3.gg</a>.<br />
+  <a href="/privacy.html">Privacy Policy</a>
+</footer>
+</div>
+<script>
+(function () {
+  var base = "https://translator-store.b3gg.workers.dev/hit";
+  var p = encodeURIComponent(location.pathname);
+  function hit(e) { try { navigator.sendBeacon(base + "?e=" + e + "&p=" + p); } catch (_) {} }
+  hit("view");
+  document.querySelectorAll("a.cta").forEach(function (a) { a.addEventListener("click", function () { hit("cta"); }); });
+})();
+</script>
+</body>
+</html>

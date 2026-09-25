@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WhatApp? — переводчик и расшифровка аудио и видео в WhatsApp</title>
-  <meta name="description" content="Бесплатный переводчик и расшифровщик аудио, видео и текстовых сообщений прямо в WhatsApp. Перешлите сообщение — получите текст и перевод на русском языке." />
+  <title>WhatApp? - переводчик и расшифровка аудио и видео в WhatsApp</title>
+  <meta name="description" content="Бесплатный переводчик и расшифровщик аудио, видео и текстовых сообщений прямо в WhatsApp. Перешлите сообщение - получите текст и перевод на русском языке." />
   <link rel="canonical" href="https://what.b3.gg/" />
   <link rel="alternate" hreflang="en" href="https://what.b3.gg/en/" />
   <link rel="alternate" hreflang="ru" href="https://what.b3.gg/" />
   <link rel="alternate" hreflang="x-default" href="https://what.b3.gg/" />
-  <meta property="og:title" content="WhatApp? — переводчик аудио и видео" />
-  <meta property="og:description" content="Перешлите голосовое или видео — получите расшифровку и перевод. Прямо в WhatsApp. Бесплатно." />
+  <meta property="og:title" content="WhatApp? - переводчик аудио и видео" />
+  <meta property="og:description" content="Перешлите голосовое или видео - получите расшифровку и перевод. Прямо в WhatsApp. Бесплатно." />
   <meta property="og:image" content="https://what.b3.gg/og.png" />
   <meta property="og:url" content="https://what.b3.gg/" />
   <meta property="og:type" content="website" />
@@ -21,18 +21,18 @@
   <meta name="twitter:image" content="https://what.b3.gg/og.png" />
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"SoftwareApplication",
-   "name":"WhatApp? — переводчик и расшифровка аудио и видео",
+   "name":"WhatApp? - переводчик и расшифровка аудио и видео",
    "applicationCategory":"UtilitiesApplication","operatingSystem":"WhatsApp на любом устройстве",
    "url":"https://what.b3.gg/","inLanguage":"ru",
    "description":"Бесплатный переводчик и расшифровщик аудио, видео и текста прямо в WhatsApp. Перешлите сообщение и получите расшифровку вместе с переводом на выбранный язык.",
    "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
-   "softwareVersion":"1.0"}
+   "softwareVersion":"1.1"}
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","inLanguage":"ru","mainEntity":[
    {"@type":"Question","name":"Как перевести голосовое сообщение из WhatsApp?","acceptedAnswer":{"@type":"Answer","text":"Откройте чат с WhatApp? по номеру +44 7529 450098, один раз выберите язык и перешлите голосовое сообщение. Через несколько секунд бот пришлёт расшифровку оригинала и перевод."}},
-   {"@type":"Question","name":"Бот переводит видео?","acceptedAnswer":{"@type":"Answer","text":"Да. Перешлите видеосообщение, кружок или видеофайл — бот извлечёт звуковую дорожку, распознает речь и переведёт её."}},
-   {"@type":"Question","name":"Это бесплатно?","acceptedAnswer":{"@type":"Answer","text":"Да, WhatApp? работает бесплатно. Не нужно устанавливать отдельное приложение или регистрироваться — всё происходит внутри WhatsApp."}},
+   {"@type":"Question","name":"Бот переводит видео?","acceptedAnswer":{"@type":"Answer","text":"Да. Перешлите видеосообщение, кружок или видеофайл - бот извлечёт звуковую дорожку, распознает речь и переведёт её."}},
+   {"@type":"Question","name":"Это бесплатно?","acceptedAnswer":{"@type":"Answer","text":"Да, WhatApp? работает бесплатно. Не нужно устанавливать отдельное приложение или регистрироваться - всё происходит внутри WhatsApp."}},
    {"@type":"Question","name":"Какие языки поддерживаются?","acceptedAnswer":{"@type":"Answer","text":"Язык исходной речи определяется автоматически. Перевод приходит на язык, выбранный в меню; изменить его можно в любой момент командой lang."}}]}
   </script>
   <link rel="icon" type="image/png" href="avatar.png" />
@@ -169,6 +169,14 @@
       .bars i, .typing i { animation: none; height: 60%; opacity: 1; }
       .bubble { animation: none; opacity: 1; transform: none; }
     }
+    .news-bar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: -28px 0 36px;
+      padding: 10px 16px; border-radius: 14px; background: rgba(0,168,150,.16);
+      border: 1px solid rgba(127,217,207,.3); font-size: 14px; color: var(--ink); text-decoration: none; }
+    .news-bar b { background: var(--teal-soft); color: var(--indigo-deep); border-radius: 999px;
+      padding: 2px 10px; font-size: 12px; letter-spacing: .04em; }
+    .news-bar:hover { background: rgba(0,168,150,.26); }
+    .navlink { font-size: 13px; font-weight: 700; text-decoration: none; margin-left: auto; margin-right: 6px; }
+    .navlink + .language { margin-left: 0; }
   </style>
   <script defer src="https://tlnt.ae/a.js" data-ym="113012342" data-name="what.b3.gg"></script>
 </head>
@@ -177,22 +185,24 @@
     <header>
       <img src="avatar.png" alt="Аватар бота WhatApp?" />
       <div><b>WhatApp?</b><small>Переводчик аудио и видео · расшифровка · бесплатно</small></div>
+      <a class="navlink" href="/novosti/">Новости</a>
       <nav class="language" aria-label="Выбор языка"><a href="/en/" lang="en" hreflang="en">EN</a><span lang="ru" aria-current="page">RU</span></nav>
     </header>
+    <a class="news-bar" href="/novosti/obnovlenie-sentyabr-2026/"><b>НОВОЕ</b> 25.09: бот читает картинки и PDF, отвечает голосом на языке собеседника, понимает хинди, урду и тагальский. Подробнее</a>
 
     <main>
       <div class="hero">
         <div>
           <h1>Не понял сообщение?<br />Перешли его в <em>WhatApp?</em></h1>
-          <p class="sub">Получили голосовое или видео на незнакомом языке? Перешлите его нашему боту в WhatsApp — через несколько секунд получите расшифровку и перевод. Работает с аудио, видео и текстом. Бесплатно, без регистрации и отдельного приложения.</p>
+          <p class="sub">Получили голосовое или видео на незнакомом языке? Перешлите его нашему боту в WhatsApp - через несколько секунд получите расшифровку и перевод. Работает с аудио, видео и текстом. Бесплатно, без регистрации и отдельного приложения.</p>
           <p class="sub-en" lang="en">Forward it. Understand it. Reply.</p>
           <a class="cta" href="https://wa.me/447529450098?text=Привет" target="_blank" rel="noopener">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.7-1.3 1.3-1.8 1.3-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .4-.1.2-.1.3-.3.5l-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3 0 .1 0 .7-.2 1.1Z"/></svg>
             Открыть в WhatsApp
           </a>
-          <div class="cta-note">+44 7529 450098 · откроется чат — просто отправьте голосовое</div>
+          <div class="cta-note">+44 7529 450098 · откроется чат - просто отправьте голосовое</div>
           <div class="qr-card">
-            <img src="/qr.svg" alt="QR-код — открыть WhatApp? в WhatsApp" width="96" height="96" loading="lazy" />
+            <img src="/qr.svg" alt="QR-код - открыть WhatApp? в WhatsApp" width="96" height="96" loading="lazy" />
             <span>Открыли с компьютера?<br />Наведите камеру телефона</span>
           </div>
         </div>
@@ -213,11 +223,11 @@
             </div>
             <div class="bubble in b2"><span class="typing"><i></i><i></i><i></i></span></div>
             <div class="bubble in b3">
-              <span class="lbl">🎧 ИСПАНСКИЙ → РУССКИЙ</span>
+              <span class="lbl">🎧 ИСПАНСКИЙ - РУССКИЙ</span>
               <hr />
-              «Nos vemos mañana a las nueve en la entrada norte».
+              “Nos vemos mañana a las nueve en la entrada norte”.
               <hr />
-              «Увидимся завтра в девять у северного входа».
+              “Увидимся завтра в девять у северного входа”.
               <span class="time">21:04</span>
             </div>
           </div>
@@ -228,8 +238,8 @@
         <div class="kicker">Как это работает</div>
         <h2>Три действия. Никаких инструкций.</h2>
         <div class="steps">
-          <div class="step"><h3>Откройте чат</h3><p>Нажмите кнопку, напишите «Привет» и один раз выберите язык, на который нужен перевод.</p></div>
-          <div class="step"><h3>Перешлите сообщение</h3><p>Голосовое, видео или текст — всё, что вы не поняли, просто отправьте боту.</p></div>
+          <div class="step"><h3>Откройте чат</h3><p>Нажмите кнопку, напишите “Привет” и один раз выберите язык, на который нужен перевод.</p></div>
+          <div class="step"><h3>Перешлите сообщение</h3><p>Голосовое, видео или текст - всё, что вы не поняли, просто отправьте боту.</p></div>
           <div class="step"><h3>Получите перевод</h3><p>Через несколько секунд бот пришлёт исходную расшифровку и перевод на ваш язык.</p></div>
         </div>
       </section>
@@ -238,10 +248,13 @@
         <div class="kicker">Что умеет бот</div>
         <h2>Гораздо больше, чем перевод голосовых</h2>
         <div class="grid">
-          <div class="card"><span class="ico">🎙️</span><h3>Голос → текст → перевод</h3><p>Бот автоматически распознаёт язык, расшифровывает речь и переводит её на выбранный вами язык.</p></div>
+          <div class="card"><span class="ico">📷</span><h3>Читает картинки</h3><p>Скриншот, вывеска, меню или документ на фото: бот найдёт текст и переведёт его.</p></div>
+          <div class="card"><span class="ico">📄</span><h3>Переводит PDF</h3><p>Договор или счёт в PDF: перевод целиком и краткое содержание в начале.</p></div>
+          <div class="card"><span class="ico">🔊</span><h3>Отвечает голосом</h3><p>Надиктуйте ответ по-русски и получите голосовое на языке собеседника, готовое к пересылке.</p></div>
+          <div class="card"><span class="ico">🎙️</span><h3>Голос - текст - перевод</h3><p>Бот автоматически распознаёт язык, расшифровывает речь и переводит её на выбранный вами язык.</p></div>
           <div class="card"><span class="ico">🎬</span><h3>Переводит видео</h3><p>Работает с видеосообщениями, кружками и файлами: извлекает звук, распознаёт речь и переводит.</p></div>
-          <div class="card"><span class="ico">💬</span><h3>Помогает ответить</h3><p>Смените язык перевода, надиктуйте ответ — и отправьте собеседнику готовый текст на его языке.</p></div>
-          <div class="card"><span class="ico">⚡</span><h3>Прямо в WhatsApp</h3><p>Ничего не нужно устанавливать и осваивать. Перешлите сообщение — ответ придёт в тот же чат.</p></div>
+          <div class="card"><span class="ico">💬</span><h3>Помогает ответить</h3><p>Смените язык перевода, надиктуйте ответ - и отправьте собеседнику готовый текст на его языке.</p></div>
+          <div class="card"><span class="ico">⚡</span><h3>Прямо в WhatsApp</h3><p>Ничего не нужно устанавливать и осваивать. Перешлите сообщение - ответ придёт в тот же чат.</p></div>
           <div class="card"><span class="ico">🆓</span><h3>Бесплатно</h3><p>Напишите боту, выберите язык и пользуйтесь. Это всё, что требуется для начала.</p></div>
         </div>
       </section>
@@ -265,7 +278,7 @@
     </main>
 
     <footer>
-      WhatApp? — переводчик и расшифровка аудио и видео, версия 1.<br />
+      WhatApp? - переводчик и расшифровка аудио и видео, версия 1.1 (<a href="/novosti/">что нового</a>).<br />
       Сообщения обрабатываются автоматически только для расшифровки и перевода.<br />
       Проект не связан с WhatsApp или Meta. Разработано <a href="https://b3.gg">b3.gg</a>.<br />
       <a href="/privacy.html">Политика конфиденциальности (Privacy Policy)</a>
